@@ -1,0 +1,31 @@
+{
+  "name": "hamoshav",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "icons": "node scripts/gen-icons.mjs",
+    "android:sync": "npm run build && npx cap sync android",
+    "android:apk": "node scripts/build-apk.mjs"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.3",
+    "@capacitor/core": "^6.2.3",
+    "@capacitor/filesystem": "^6.0.4",
+    "@capacitor/preferences": "^6.0.4",
+    "@capacitor/splash-screen": "^6.0.4",
+    "@fontsource/heebo": "^5.3.0",
+    "phaser": "^3.80.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.2.3",
+    "playwright-core": "1.48",
+    "typescript": "5.6",
+    "vite": "5.4",
+    "vitest": "2.1"
+  }
+}
